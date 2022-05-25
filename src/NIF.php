@@ -103,4 +103,9 @@ class NIF
 
         return "$this->numero$this->letra";
     }
+
+    public function __toString(): string
+    {
+        return $this->obtenerNIF();
+    }
 }

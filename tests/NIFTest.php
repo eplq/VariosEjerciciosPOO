@@ -31,7 +31,7 @@ class NIFTest extends TestCase
     public function testLetraDNI()
     {
         $n3 = new NIF(11111111);
-        $this->assertEquals("11111111H", $n3->obtenerNIF());
+        $this->assertEquals("11111111H", (string) $n3);
     }
 
     public function testComprobarLetra()
