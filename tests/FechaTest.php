@@ -31,4 +31,12 @@ class FechaTest extends TestCase
 
         $this->assertEquals("12/11/2022", $fecha->__toString());
     }
+
+    public function testHoy()
+    {
+        $fechaHoy = new \DateTime();
+        $fecha = Fecha::hoy();
+
+        $this->assertEquals($fechaHoy->format("d/m/Y"), (string) $fecha);
+    }
 }

@@ -15,6 +15,11 @@ class Fecha
         $this->fecha = \DateTime::createFromFormat("d/m/Y", $fecha);
     }
 
+    public static function hoy()
+    {
+        return new Fecha((new \Datetime())->format("d/m/Y"));
+    }
+
     private static function comprobarFecha(string $fecha)
     {
         $fecha = \DateTime::createFromFormat("d/m/Y", $fecha);
